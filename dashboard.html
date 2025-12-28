@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+    <h2>ATM Dashboard</h2>
+    <h3>Balance: ₹{{ balance }}</h3>
+
+    <form method="post" action="/withdraw">
+        <input name="amount" placeholder="Withdraw Amount" required>
+        <button>Withdraw</button>
+    </form>
+
+    <form method="post" action="/deposit">
+        <input name="amount" placeholder="Deposit Amount" required>
+        <button>Deposit</button>
+    </form>
+
+    <a href="/logout">Logout</a>
+</div>
